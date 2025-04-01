@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client path in GoHighLevel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-4 max-w-6xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Client path in GoHighLevel</h1>
+            <p class="text-gray-600">Interactive visualization of automated processes</p>
+        </header>
+        
+        <div id="animation-controls" class="my-6 flex flex-col items-center">
+            <button id="start-animation" class="px-4 py-2 rounded-md font-medium bg-blue-600 hover:bg-blue-700 text-white">
+                Start the animation
+            </button>
+            <div id="animation-status" class="mt-4 p-3 bg-blue-50 border border-blue-100 rounded-md text-center w-full hidden">
+                <p id="animation-step-description" class="text-blue-800"></p>
+                <div class="mt-2 h-1 w-full bg-gray-200 rounded-full overflow-hidden">
+                    <div id="animation-progress" class="h-full bg-blue-600 transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="journey-visualization" class="flex flex-col md:flex-row justify-between items-center my-8 relative">
+            
+        </div>
+        
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div id="stage-details-container">
+                <h2 class="font-bold text-lg mb-4 text-gray-700 hidden" id="stage-details-title">Stage details</h2>
+                <div id="stage-details"></div>
+            </div>
+            <div id="automation-container">
+                <h2 class="font-bold text-lg mb-4 text-gray-700 hidden" id="automation-title">Automation at this stage</h2>
+                <div id="automation-details"></div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <h3 class="font-medium text-gray-800 mb-2">How to use this visualization:</h3>
+            <ul class="space-y-1 text-gray-600 text-sm">
+                <li>• Click "Play Animation" to see the full customer path in action</li>
+                <li>• Click on any stage to see detailed information after or before the animation starts</li>
+                <li>• Each stage shows the client process and automation working behind the scenes</li>
+                <li>• The numbered steps represent a typical progression through your system</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="js/visualization.js"></script>
+</body>
+</html>

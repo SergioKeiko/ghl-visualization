@@ -1,1 +1,20 @@
+.stage-box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.stage-box:hover {
+    transform: scale(1.02);
+}
+
+.stage-box.active {
+    transform: scale(1.05);
+}
+
+.connector svg path {
+    transition: stroke 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
